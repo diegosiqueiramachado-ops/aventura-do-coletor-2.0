@@ -1,0 +1,596 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f8e9;
+    color: #244536;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    background: #174f35;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 7%;
+
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    box-shadow: 0 4px 15px #0003;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffe36e;
+}
+
+.menu-btn {
+    display: none;
+
+    background: none;
+    border: none;
+
+    color: white;
+    font-size: 28px;
+
+    cursor: pointer;
+}
+
+
+/* INÍCIO */
+
+.inicio {
+    min-height: 600px;
+
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 40px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #073019cc,
+            #07301922
+        ),
+        url("./assets/fundo-jogo.jpeg")
+        center / cover;
+}
+
+.inicio-conteudo {
+    max-width: 650px;
+    color: white;
+}
+
+.etiqueta {
+    color: #fff0a3;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 1;
+    margin: 20px 0;
+
+    text-shadow: 4px 5px #0003;
+}
+
+h1 span {
+    color: #d7f34f;
+}
+
+.inicio p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+.botao {
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    background: #f6c945;
+    color: #24401f;
+
+    border: none;
+    border-radius: 12px;
+
+    font-weight: bold;
+    font-size: 16px;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+.secundario {
+    background: white;
+    color: #174f35;
+}
+
+
+/* MISSÃO */
+
+.missao {
+    max-width: 230px;
+
+    padding: 25px;
+
+    background: #174f35e6;
+    color: white;
+
+    text-align: center;
+
+    border: 4px solid white;
+    border-radius: 22px;
+
+    box-shadow: 0 10px 25px #0004;
+}
+
+.trofeu {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.missao h3 {
+    margin-bottom: 10px;
+}
+
+.missao p {
+    line-height: 1.5;
+}
+
+
+/* SEÇÕES */
+
+section {
+    padding: 80px 7%;
+}
+
+.titulo-secao {
+    max-width: 800px;
+
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.titulo-secao span {
+    color: #57952d;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 42px;
+    color: #23633d;
+
+    margin: 15px 0;
+}
+
+.titulo-secao p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* OBJETOS */
+
+.objetos {
+    max-width: 850px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.objeto {
+    padding: 35px 25px;
+
+    background: white;
+
+    text-align: center;
+
+    border-radius: 22px;
+
+    border: 3px solid #91d56b;
+
+    box-shadow: 0 8px 20px #2250281f;
+}
+
+.objeto.pedra {
+    border-color: #e7a1a1;
+}
+
+.icone {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.objeto h3 {
+    font-size: 25px;
+    color: #23633d;
+
+    margin-bottom: 12px;
+}
+
+.objeto p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.objeto strong {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    background: #d9f5bd;
+    color: #245c2b;
+}
+
+.objeto.pedra strong {
+    background: #ffe0e0;
+    color: #9e2525;
+}
+
+
+/* COMO JOGAR */
+
+.secao-verde {
+    background: #dff1d2;
+}
+
+.passos {
+    max-width: 950px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.passo {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 6px 15px #2250281a;
+}
+
+.passo b {
+    min-width: 45px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #77c84c;
+    color: #173f25;
+
+    font-size: 22px;
+}
+
+.passo h3 {
+    color: #23633d;
+    margin-bottom: 8px;
+}
+
+.passo p {
+    line-height: 1.5;
+}
+
+.dica {
+    max-width: 700px;
+
+    margin: 35px auto 0;
+
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    background: #23633d;
+    color: white;
+
+    border-radius: 18px;
+}
+
+.dica:first-letter {
+    font-size: 35px;
+}
+
+.dica h3 {
+    margin-bottom: 8px;
+}
+
+.dica p {
+    line-height: 1.5;
+}
+
+
+/* ÁREA RESERVADA PARA O JOGO */
+
+.area-jogo {
+    background: #f1f8e9;
+}
+
+.caixa-jogo {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    text-align: center;
+
+    border: 4px dashed #77c84c;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 20px #2250281f;
+}
+
+.icone-jogo {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.caixa-jogo h3 {
+    font-size: 27px;
+
+    color: #23633d;
+
+    margin-bottom: 15px;
+}
+
+.caixa-jogo > p {
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+    line-height: 1.6;
+}
+
+.espaco-jogo {
+    min-height: 280px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    background: #dff1d2;
+
+    border: 3px solid #91d56b;
+
+    border-radius: 18px;
+
+    padding: 25px;
+}
+
+.controle-jogo {
+    font-size: 65px;
+}
+
+.espaco-jogo h3 {
+    font-size: 22px;
+}
+
+.espaco-jogo p {
+    font-weight: bold;
+
+    color: #23633d;
+}
+
+
+/* FORMULÁRIO */
+
+#formulario {
+    max-width: 650px;
+
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+#formulario label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+#formulario input,
+#formulario textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #c4dfb7;
+    border-radius: 10px;
+
+    font: inherit;
+    background: white;
+}
+
+#formulario textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+#formulario .botao {
+    margin-top: 15px;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    padding: 28px;
+
+    text-align: center;
+
+    background: #174f35;
+    color: white;
+
+    line-height: 1.8;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 750px) {
+
+    header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+        flex-direction: column;
+        text-align: center;
+
+        background: #174f35;
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+
+    .inicio {
+        min-height: 650px;
+
+        padding: 60px 7%;
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .inicio p {
+        font-size: 17px;
+    }
+
+    .missao {
+        align-self: center;
+    }
+
+    section {
+        padding: 60px 5%;
+    }
+
+    h2 {
+        font-size: 34px;
+    }
+
+    .objetos,
+    .passos {
+        grid-template-columns: 1fr;
+    }
+
+    .caixa-jogo {
+        padding: 20px;
+    }
+
+    .espaco-jogo {
+        min-height: 230px;
+    }
+
+}
